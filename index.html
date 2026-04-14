@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warcraft 3: Эпохи и расы</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0a0a1a;
+            color: #e0d0b0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(42, 26, 10, 0.9);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffd700;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #8b4513;
+        }
+
+        /* Стили баннера */
+        .banner {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .banner-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-slide.active {
+            opacity: 1;
+        }
+
+        .race-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .human { background: linear-gradient(45deg, #1e90ff, #4169e1); }
+        .orc { background: linear-gradient(45deg, #32cd32, #228b22); }
+        .undead { background: linear-gradient(45deg, #8b008b, #4b0082); }
+        .night-elf { background: linear-gradient(45deg, #2e8b57, #006400); }
+
+        /* Блок «Почему Warcraft 3?» */
+        .features {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(40, 40, 60, 0.7);
+            border-radius: 10px;
+            border: 1px solid #8b4513;
+        }
+
+        .features h2 {
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 15px;
+            text-align: center;
+            border: 1px dashed #8b4513;
+            border-radius: 5px;
+        }
+
+        /* Карусель скриншотов */
+        .screenshot-carousel {
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .carousel-nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #555;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-dot.active {
+            background: #ffd700;
+        }
+
+        /* Кнопка */
+        .explore-btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #8b4513, #654321);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #ffd700;
+            transition: all 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background: linear-gradient(to right, #a0522d, #8b4513);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #555;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Warcraft 3: Эпохи и расы</h1>
+    </header>
+
+    <main>
+        <!-- Анимированный баннер с логотипами рас -->
+        <div class="banner">
+            <div class="banner-slide active">
+                <div class="race-logo human">Люди</div>
+                <div class="race-logo orc">Орки</div>
+            </div>
+            <div class="banner-slide">
+                <div class="race-logo undead">Нежить</div>
+                <div class="race-logo night-elf">Ночные эльфы</div>
+            </div>
+        </div>
+
+        <!-- Краткое описание игры -->
+        <section style="text-align: center; padding: 20px;">
+            <p>Warcraft 3 — легендарная стратегия в реальном времени от Blizzard Entertainment. Погрузитесь в эпическую борьбу четырёх рас за господство над Азеротом. Каждая раса обладает уникальными юнитами, героями и стратегиями победы.</p>
+        </section>
+
+        <!-- Блок «Почему Warcraft 3?» -->
+        <section class="features">
+            <h2>Почему Warcraft 3?</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <h3>Эпичный сюжет</h3>
+                    <p>Захватывающая кампания с развитием персонажей и неожиданными поворотами.</p>
+                </div>
+                <div class="feature">
+                    <h3>Баланс рас</h3>
+            <p>Каждая раса уникальна, но при этом сохраняет баланс в мультиплеере.</p>
+                </div>
+                <div class="feature">
+            <h3>Культовые персонажи</h3>
+            <p>Артес, Тралл, Тиренд и другие герои стали иконами фэнтези‑жанра.</p>
+                </div>
+                <div class="feature">
+            <h3>Мультиплеер</h3>
+            <p>Десятки лет активной соревновательной сцены и сообщества игроков.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карусель скриншотов -->
+        <section class="screenshot-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder
+            <img src="https://via.placeholder.com/900x400/1e90ff/ffffff?text=Скриншот+1" alt="Скриншот Warcraft 3 - Люди">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/900x400/32cd32/ffffff?text=Скриншот+2" alt="Скриншот Warcraft 3 - Орки">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/900x400/8b008b/ffffff?text=Скриншот+3" alt="Скриншот Warcraft 3 - Нежить">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/900x400/2e8b57/ffffff?text=Скриншот+4" alt="Скриншот Warcraft 3 - Ночные эльфы">
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <span class="carousel-dot active" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+                <span class="carousel-dot" data-slide="3"></span>
+            </div>
+        </section>
+
+        <!-- Кнопка «Изучить расы» -->
+        <a href="races.html" class="explore-btn">Изучить расы</a>
+    </main>
+
+    <footer>
+        <p>Сайт фанатов Warcraft 3. Все права принадлежат Blizzard Entertainment.</p>
+    </footer>
+
+    <script>
+        // JavaScript для баннера с логотипами рас
+        const bannerSlides = document.querySelectorAll('.banner-slide');
+        let currentBannerSlide = 0;
+
+        function showNextBannerSlide() {
+            bannerSlides[currentBannerSlide].classList.remove('active');
+            currentBannerSlide = (currentBannerSlide + 1) % bannerSlides.length;
+            bannerSlides[currentBannerSlide].classList.add('active');
+        }
+
+        setInterval(showNextBannerSlide, 3000); // Смена каждые 3 секунды
+
+        // JavaScript для карусели скриншотов
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            // Скрываем все слайды
+            carouselSlides.forEach(slide => slide.style.display = 'none');
+            // Убираем активный класс у всех точек
+            carouselDots.forEach(dot => dot.classList.remove('active'));
+
+            // Показываем выбранный слайд
+            carouselSlides[n].style.display = 'block';
+            carouselDots[n].classList.add('active');
+            currentSlide = n;
+        }
+
+        // Обработчики для точек навигации
+        carouselDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Автоматическое переключение слайдов
+        function autoSlide() {
+            let nextSlide = (currentSlide + 1) % carouselSlides.length;
+            showSlide(nextSlide);
+        }
+
+        // Запускаем автопереключение каждые 4 секунды
+        setInterval(autoSlide, 4000);
+
+        // Инициализация — показываем первый слайд
+        showSlide(0);
+    </script>
+</body>
+</html>

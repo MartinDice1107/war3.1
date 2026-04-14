@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Орки (Орда) — Warcraft 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0a0a1a;
+            color: #e0d0b0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #32cd32;
+            padding-bottom: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #ffd700;
+        }
+
+        .race-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .race-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #32cd32, #228b22);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Контейнеры */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(40, 40, 60, 0.7);
+            border: 1px solid #8b4513;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Таблица юнитов */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            background-color: rgba(139, 69, 19, 0.5);
+            color: #ffd700;
+        }
+
+        tr:hover {
+            background-color: rgba(60, 60, 80, 0.8);
+        }
+
+        /* Карточки героев */
+        .heroes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .hero-card {
+            background: rgba(60, 60, 80, 0.8);
+            border: 1px solid #228b22;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #32cd32;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Навигация */
+        .back-link {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #8b4513, #654321);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #555;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="race-header">
+            <div class="race-icon orc">⛞</div>
+            <h1>Орки (Орда)</h1>
+        </div>
+        <p>Свирепые воины Дренора. Сила в единстве и шаманизме.</p>
+    </header>
+
+    <main class="content-container">
+        <section class="section">
+            <h2>История расы</h2>
+            <p>Орки — потомки шаманских кланов Дренора, попавшие под влияние демонов Пылающего Легиона. После побега из Дренора они нашли новый дом в Азероте под предводительством Тралла.</p>
+            <p>Ключевые лидеры: Тралл, Гром Адский Крик. Союзники: таурены, тролли.</p>
+        </section>
+
+        <section class="section">
+            <h2>Ключевые юниты</h2>
+            <table>
+                <thead>
+                    <tr>
+                <th>Юнит</th>
+                <th>Тип</th>
+                <th>Атака</th>
+                <th>Защита</th>
+                <th>Особенности</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Бугай</td>
+                <td>Ближний бой</td>
+                <td>16</td>
+                <td>2</td>
+                <td>Берсерк: увеличивает атаку ценой защиты</td>
+            </tr>
+            <tr>
+                <td>Воин с топором</td>
+                <td>Ближний бой</td>
+                <td>14</td>
+                <td>1</td>
+                <td>Быстрая атака, эффективен против пехоты</td>
+            </tr>
+            <tr>
+                <td>Шаман</td>
+                <td>Магический</td>
+                <td>8</td>
+                <td>0</td>
+                <td>Заклинания: «Цепная молния», «Щит»</td>
+            </tr>
+            <tr>
+                <td>Катапульта</td>
+                <td>Осадное орудие</td>
+                <td>25 (по зданиям)</td>
+                <td>3</td>
+                <td>Дальняя атака, эффективна против зданий</td>
+            </tr>
+            <tr>
+                <td>Разведчик</td>
+                <td>Кавалерия</td>
+                <td>10</td>
+                <td>1</td>
+                <td>Высокая скорость, разведка территории</td>
+            </tr>
+            <tr>
+                <td>Рабочий</td>
+                <td>Работник</td>
+                <td>6</td>
+                <td>0</td>
+                <td>Добыча ресурсов, строительство</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="section">
+    <h2>Герои</h2>
+    <div class="heroes-grid">
+        <!-- Герой 1 -->
+        <div class="hero-card">
+            <div class="hero-icon">⚔</div>
+            <h3>Тралл</h3>
+            <p><strong>Класс:</strong> Вождь</p>
+            <p><strong>Способности:</strong></p>
+            <ul>
+                <li>«Гром Земли» — наносит урон по площади</li>
+                <li>«Аура ярости» — увеличивает скорость атаки союзников</li>
+                <li>«Исцеление» — восстанавливает здоровье</li>
+            </ul>
+            <p>Лидер Орды, шаман и воин, освободивший орков от демонического влияния.</p>
+        </div>
+        <!-- Герой 2 -->
+        <div class="hero-card">
+            <div class="hero-icon">🗡️</div>
+            <h3>Гром Адский Крик</h3>
+            <p><strong>Класс:</strong> Воин</p>
+            <p><strong>Способности:</strong></p>
+            <ul>
+                <li>«Ярость берсерка» — значительно увеличивает атаку, но снижает защиту</li>
+                <li>«Боевой клич» — пугает ближайших врагов, заставляя их бежать</li>
+                <li>«Удар грома» — наносит урон по площади и оглушает на 2 секунды</li>
+            </ul>
+            <p>Вождь клана Песни Войны, один из первых, кто поддался демонической крови.</p>
+        </div>
+
+        <!-- Герой 3 -->
+        <div class="hero-card">
+            <div class="hero-icon">⚡</div>
+            <h3>Дрек’Тар</h3>
+            <p><strong>Класс:</strong> Шаман</p>
+            <p><strong>Способности:</strong></p>
+            <ul>
+                <li>«Цепная молния» — поражает несколько целей подряд</li>
+                <li>«Водный щит» — создаёт барьер, поглощающий урон</li>
+                <li>«Тотем землетрясений» — вызывает землетрясение в указанной области</li>
+            </ul>
+            <p>Верховный шаман клана Северного Волка, наставник Тралла.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Стратегия и тактика</h2>
+    <h3>Сильные стороны:</h3>
+    <ul>
+        <li>Мощные ближние бойцы с высокими показателями атаки</li>
+        <li>Эффективные шаманы с массовыми заклинаниями</li>
+        <li>Быстрая мобилизация войск</li>
+        <li>Сильные герои с контролем и уроном</li>
+    </ul>
+
+    <h3>Слабые стороны:</h3>
+    <ul>
+        <li>Уязвимость к дальним атакам</li>
+        <li>Ограниченные возможности лечения</li>
+        <li>Зависимость от маны у шаманов</li>
+    </ul>
+
+    <h3>Советы по игре:</h3>
+    <ol>
+        <li>Используйте бугаев и воинов с топорами для быстрого давления на врага.</li>
+        <li>Развивайтесь до катапульт для разрушения зданий.</li>
+        <li>Применяйте «Ярость берсерка» в решающих сражениях.</li>
+        <li>Держите шаманов позади линии фронта для поддержки.</li>
+        <li>Используйте разведчиков для обнаружения вражеских лагерей.</li>
+        <li>Комбируйте способности героев для максимального эффекта.</li>
+    </ol>
+</section>
+
+<section class="section">
+    <h2>Интересные факты</h2>
+    <ul>
+        <li>Орки были порабощены демонами Пылающего Легиона через «кровь Маннорота».</li>
+        <li>Тралл основал новую Орду, свободную от демонического влияния.</li>
+        <li>Шаманизм — древняя религия орков, почти забытая во времена демонического влияния.</li>
+        <li>Клан Песни Войны известен своей яростью в бою.</li>
+    </ul>
+</section>
+</main>
+
+<footer>
+    <a href="races.html" class="back-link">← Вернуться к выбору рас</a>
+    <p>Сайт фанатов Warcraft 3. Все права принадлежат Blizzard Entertainment.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расы Warcraft 3</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0a0a1a;
+            color: #e0d0b0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #ffd700;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #8b4513;
+        }
+
+        /* Контейнер для блоков рас */
+        .races-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Блок расы */
+        .race-card {
+            background: rgba(40, 40, 60, 0.7);
+            border: 2px solid #8b4513;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .race-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.4);
+            background: rgba(60, 60, 80, 0.8);
+        }
+
+        /* Иконки рас */
+        .race-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .human { background: linear-gradient(45deg, #1e90ff, #4169e1); }
+        .orc { background: linear-gradient(45deg, #32cd32, #228b22); }
+        .undead { background: linear-gradient(45deg, #8b008b, #4b0082); }
+        .night-elf { background: linear-gradient(45deg, #2e8b57, #006400); }
+
+        /* Заголовок расы */
+        .race-name {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Описание расы */
+        .race-description {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* Ссылка "Подробнее" */
+        .more-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #8b4513, #654321);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .more-link:hover {
+            background: linear-gradient(to right, #a0522d, #8b4513);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #555;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Расы Warcraft 3</h1>
+        <p>Выберите расу, чтобы узнать больше о её истории, юнитах и стратегиях</p>
+    </header>
+
+    <main>
+        <section class="races-container">
+            <!-- Блок: Люди (Альянс) -->
+            <a href="human.html" class="race-card">
+                <div class="race-icon human">��</div>
+                <h2 class="race-name">Люди (Альянс)</h2>
+                <p class="race-description">Рыцари Лордерона и маги Даларана. Сила в дисциплине и технологиях.</p>
+                <span class="more-link">Подробнее о Людях</span>
+            </a>
+
+            <!-- Блок: Орки (Орда) -->
+            <a href="orc.html" class="race-card">
+                <div class="race-icon orc">��</div>
+                <h2 class="race-name">Орки (Орда)</h2>
+                <p class="race-description">Свирепые воины Дренора. Сила в единстве и шаманизме.</p>
+                <span class="more-link">Подробнее об Орках</span>
+            </a>
+
+            <!-- Блок: Нежить (Плеть) -->
+            <a href="undead.html" class="race-card">
+                <div class="race-icon undead">��</div>
+                <h2 class="race-name">Нежить (Плеть)</h2>
+                <p class="race-description">Бессмертная армия Короля‑лича. Сила в некромантии и заразе.</p>
+                <span class="more-link">Подробнее о Нежити</span>
+            </a>
+
+            <!-- Блок: Ночные эльфы -->
+            <a href="night-elf.html" class="race-card">
+                <div class="race-icon night-elf">��</div>
+                <h2 class="race-name">Ночные эльфы</h2>
+                <p class="race-description">Древние стражи Калимдора. Сила в магии природы и скрытности.</p>
+                <span class="more-link">Подробнее о Ночных эльфах</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Сайт фанатов Warcraft 3. Все права принадлежат Blizzard Entertainment.</p>
+    </footer>
+</body>
+</html>

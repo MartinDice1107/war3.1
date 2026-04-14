@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нежить (Плеть) — Warcraft 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0a0a1a;
+            color: #e0d0b0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #8b008b;
+            padding-bottom: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #ffd700;
+        }
+
+        .race-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .race-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #8b008b, #4b0082);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Контейнеры */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(40, 40, 60, 0.7);
+            border: 1px solid #8b4513;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Таблица юнитов */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            background-color: rgba(139, 69, 19, 0.5);
+            color: #ffd700;
+        }
+
+        tr:hover {
+            background-color: rgba(60, 60, 80, 0.8);
+        }
+
+        /* Карточки героев */
+        .heroes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .hero-card {
+            background: rgba(60, 60, 80, 0.8);
+            border: 1px solid #4b0082;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #8b008b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Навигация */
+        .back-link {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #8b4513, #654321);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #555;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="race-header">
+            <div class="race-icon undead">💀</div>
+            <h1>Нежить (Плеть)</h1>
+        </div>
+        <p>Слуги Короля‑лича. Сила в некромантии и бессмертии.</p>
+    </header>
+
+    <main class="content-container">
+        <section class="section">
+            <h2>История расы</h2>
+            <p>Нежить — армия Короля‑лича, созданная из заражённых чумой жителей Лордерона. Под командованием Артаса они несут смерть и разрушение. Их сила — в некромантии, контроле над мёртвыми и отсутствии страха перед смертью.</p>
+            <p>Ключевые лидеры: Артас Менетил (Король‑лич), Кел’Тузад. Союзники: демоны (в прошлом), некоторые тёмные маги.</p>
+        </section>
+
+        <section class="section">
+            <h2>Ключевые юниты</h2>
+            <table>
+                <thead>
+                    <tr>
+                <th>Юнит</th>
+                <th>Тип</th>
+                <th>Атака</th>
+                <th>Защита</th>
+                <th>Особенности</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Вурдалак</td>
+                <td>Ближний бой</td>
+                <td>14</td>
+                <td>2</td>
+                <td>Пожирание: восстанавливает здоровье, поедая трупы</td>
+            </tr>
+            <tr>
+                <td>Некромант</td>
+                <td>Магический</td>
+                <td>8</td>
+                <td>0</td>
+                <td>Поднимает скелетов из трупов, заклинания: «Порча»</td>
+            </tr>
+            <tr>
+                <td>Могильщик</td>
+                <td>Работник</td>
+                <td>5</td>
+                <td>0</td>
+                <td>Добыча ресурсов, строительство, воскрешение трупов</td>
+            </tr>
+            <tr>
+                <td>Горгулья</td>
+                <td>Воздушный</td>
+                <td>12</td>
+                <td>1</td>
+                <td>Летает, превращается в камень для восстановления здоровья</td>
+            </tr>
+            <tr>
+                <td>Банши</td>
+                <td>Магический/Дальний</td>
+                <td>9</td>
+                <td>0</td>
+                <td>Способности: «Одержимость» (контролирует врага), «Вопль» (наносит урон по площади)</td>
+            </tr>
+            <tr>
+                <td>Мясник</td>
+                <td>Ближний бой</td>
+                <td>20</td>
+                <td>3</td>
+                <td>Высокая атака, но медленная скорость</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="section">
+    <h2>Герои</h2>
+    <div class="heroes-grid">
+        <!-- Герой 1 -->
+        <div class="hero-card">
+            <div class="hero-icon">👑</div>
+            <h3>Артас Менетил</h3>
+            <p><strong>Класс:</strong> Рыцарь смерти</p>
+            <p><strong>Способности:</strong></p>
+            <ul>
+                <li>«Ледяная стрела» — наносит магический урон и замедляет цель</li>
+                <li>«Воскрешение мёртвых» — поднимает группу скелетов из трупов</li>
+                <li>«Смерть и разложение» — создаёт зону, наносящую урон всем в радиусе</li>
+            </ul>
+            <p>Принц Лордерона, ставший Королём‑личом. Носитель Ледяной Скорби.</p>
+        </div>
+
+        <!-- Герой 2 -->
+        <div class="hero-card">
+            <div class="hero-icon">💀</div>
+            <h3>Кел’Тузад</h3>
+            <p><strong>Класс:</strong> Лич</p>
+            <p><strong>Способности:</strong></p>
+            <ul>
+                <li>«Порча» — наносит периодический урон, не может быть снят</li>
+                <li>«Взрыв разума» — наносит урон и оглушает цель</li>
+                <li>«Костяная тюрьма» — создаёт барьер из костей, блокирующий проход</li>
+            </ul>
+            <p>Архимаг Даларана, переродившийся как лич. Главный советник Артаса.</p>
+        </div>
+
+        <!-- Герой 3 -->
+        <div class="hero-card">
+            <div class="hero-icon">👻</div>
+            <h3>Сильвана Ветрокрылая</h3>
+            <p><strong>Класс:</strong> Тёмная рейнджер</p>
+            <p><strong>Способности:</strong></p>
+            <ul>
+                <li>«Увядание» — снижает атаку и защиту цели</li>
+                <li>«Невидимость» — становится невидимой на короткое время</li>
+                <li>«Залп» — выпускает множество стрел, поражающих несколько целей</li>
+            </ul>
+            <p>Бывший генерал‑рейнджер высших эльфов, воскрешённая как банши.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Стратегия и тактика</h2>
+    <h3>Сильные стороны:</h3>
+    <ul>
+        <li>Возможность воскрешать павших юнитов</li>
+        <li>Устойчивость к физическому урону</li>
+        <li>Эффективные магические атаки и контроль</li>
+        <li>Способность к самовосстановлению (пожирание трупов)</li>
+    </ul>
+
+    <h3>Слабые стороны:</h3>
+    <ul>
+        <li>Зависимость от наличия трупов для воскрешения</li>
+        <li>Низкая скорость некоторых юнитов</li>
+        <li>Уязвимость к святой магии и огню</li>
+    </ul>
+
+    <h3>Советы по игре:</h3>
+    <ol>
+        <li>Используйте вурдалаков для постоянной регенерации здоровья через пожирание.</li>
+        <li>Стройте некрополисы рядом с местами сражений для быстрого воскрешения.</li>
+        <li>Применяйте «Порчу» Кел’Тузада против групп юнитов.</li>
+        <li>Держите Артаса в бою — его способности могут переломить ход сражения.</li>
+        <li>Используйте горгулий для разведки и атак на здания.</li>
+        <li>Комбируйте «Смерть и разложение» с атакой мясников для максимального урона.</li>
+    </ol>
+</section>
+
+
+<section class="section">
+    <h2>Интересные факты</h2>
+    <ul>
+        <li>Чума, созданная Плетью, уничтожила большую часть населения Лордерона.</li>
+        <li>Артас стал Королём‑личом, надев шлем Нер’зула.</li>
+        <li>Сильвана Ветрокрылая позже возглавила Отрёкшихся — мятежную часть нежити.</li>
+        <li>Некроманты могут поднимать скелетов даже из вражеских трупов.</li>
+    </ul>
+</section>
+</main>
+
+<footer>
+    <a href="races.html" class="back-link">← Вернуться к выбору рас</a>
+    <p>Сайт фанатов Warcraft 3. Все права принадлежат Blizzard Entertainment.</p>
+</footer>
+</body>
+</html>

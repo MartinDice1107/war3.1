@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герои и юниты — Warcraft 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0a0a1a;
+            color: #e0d0b0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #ffd700;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(40, 40, 60, 0.7);
+            border: 1px solid #8b4513;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Стили для карточек героев */
+        .heroes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .hero-card {
+            background: rgba(60, 60, 80, 0.8);
+            border: 1px solid #8b4513;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Таблица юнитов */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            background-color: rgba(139, 69, 19, 0.5);
+            color: #ffd700;
+        }
+
+        tr:hover {
+            background-color: rgba(60, 60, 80, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #555;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Герои и юниты Warcraft 3</h1>
+    </header>
+
+    <main class="content-container">
+        <section class="section">
+            <h2>Герои</h2>
+            <div class="heroes-grid">
+                <!-- Герой 1 -->
+                <div class="hero-card">
+                    <div class="hero-icon">💀</div>
+            <h3>Артес</h3>
+            <p><strong>Раса:</strong> Нежить</p>
+            <p><strong>Описание:</strong> Паладин, ставший Рыцарем Смерти</p>
+        </div>
+
+        <!-- Герой 2 -->
+        <div class="hero-card">
+            <div class="hero-icon">⚔</div>
+            <h3>Тралл</h3>
+            <p><strong>Раса:</strong> Орки</p>
+            <p><strong>Описание:</strong> Вождь Орды, шаман</p>
+        </div>
+
+        <!-- Герой 3 -->
+        <div class="hero-card">
+            <div class="hero-icon">🌕</div>
+            <h3>Тиренд</h3>
+            <p><strong>Раса:</strong> Ночные эльфы</p>
+            <p><strong>Описание:</strong> Верховная жрица Элуны</p>
+        </div>
+
+        <!-- Герой 4 -->
+        <div class="hero-card">
+            <div class="hero-icon">⚑</div>
+            <h3>Утер</h3>
+            <p><strong>Раса:</strong> Люди</p>
+            <p><strong>Описание:</strong> Светлый паладин</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Юниты</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Раса</th>
+                <th>Атака</th>
+                <th>Защита</th>
+                <th>Особенности</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Рыцарь</td>
+                <td>Люди</td>
+                <td>12</td>
+                <td>2</td>
+                <td>Контрудар: наносит ответный удар при атаке</td>
+            </tr>
+            <tr>
+                <td>Банши</td>
+                <td>Нежить</td>
+                <td>8</td>
+                <td>0</td>
+                <td>Невосприимчивость к магии разума</td>
+            </tr>
+            <tr>
+                <td>Лучница</td>
+                <td>Ночные эльфы</td>
+                <td>10</td>
+                <td>1</td>
+                <td>Ночная невидимость: становится невидимой в темноте</td>
+            </tr>
+            <tr>
+                <td>Воин с топором</td>
+                <td>Орки</td>
+                <td>14</td>
+                <td>1</td>
+                <td>Быстрая атака, эффективен против пехоты</td>
+            </tr>
+            <tr>
+                <td>Вурдалак</td>
+                <td>Нежить</td>
+                <td>14</td>
+                <td>2</td>
+                <td>Пожирание: восстанавливает здоровье, поедая трупы</td>
+            </tr>
+            <tr>
+                <td>Друид-медведь</td>
+                <td>Ночные эльфы</td>
+                <td>18</td>
+                <td>3</td>
+                <td>Форма медведя: повышенная защита и атака</td>
+            </tr>
+            <tr>
+                <td>Бугай</td>
+                <td>Орки</td>
+                <td>16</td>
+                <td>2</td>
+                <td>Берсерк: увеличивает атаку ценой защиты</td>
+            </tr>
+            <tr>
+                <td>Некромант</td>
+                <td>Нежить</td>
+                <td>8</td>
+                <td>0</td>
+                <td>Поднимает скелетов из трупов</td>
+            </tr>
+            <tr>
+                <td>Грифон</td>
+                <td>Люди</td>
+                <td>15</td>
+                <td>2</td>
+                <td>Летает, может перевозить лучников</td>
+            </tr>
+            <tr>
+                <td>Горный великан</td>
+                <td>Ночные эльфы</td>
+                <td>22</td>
+                <td>4</td>
+                <td>Высокая защита, эффективен против зданий</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+</main>
+
+<footer>
+        <a href="index.html" class="back-link" style="display: inline-block; margin: 30px auto; padding: 10px 20px; background: linear-gradient(to right, #8b4513, #654321); color: white; text-decoration: none; border-radius: 25px; font-weight: bold; text-align: center;">← Вернуться на главную</a>
+</footer>
+</body>
+</html>
